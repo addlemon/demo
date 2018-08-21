@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>异常处理</title>
+</head>
+<body>
+    <form>
+        <input id="text" type="text">
+        <input id="btn" type="button" onclick="demo()" value="按钮">
+    </form>
+
+<script>
+    function demo() {
+        try {
+            var x = document.getElementById("text").value;
+            if (x == ""){
+                throw "输入为空";
+            }else {
+                alert(x);
+            }
+        }catch (e) {
+            alert(e);
+        }
+    }
+</script>
+</body>
+</html>

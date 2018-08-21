@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>changeImage</title>
+</head>
+<body>
+<script>
+    function changeImage()
+    {
+        element=document.getElementById('myimage')
+        if (element.src.match("02"))
+        {
+            element.src="images/01.jpg";
+        }
+        else
+        {
+            element.src="images/02.jpg";
+        }
+
+    }
+    function demo() {
+        document.getElementById("myimage").src = "images/01.jpg";
+    }
+</script>
+<img id="myimage" onclick="changeImage()"
+     src="images/02.jpg" width="450" height="680">
+<button onclick="demo()">变图</button>
+</body>
+</html>

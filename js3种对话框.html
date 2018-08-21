@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript 3种 对话框</title>
+</head>
+<body>
+    <button onclick="fun1()">你有一个礼物</button>
+    <button onclick="fun2()">我要接收礼物</button>
+    <button onclick="fun3()">必须先对暗号</button>
+<script>
+    window.alert(15+7);
+    function fun1() {
+        alert("你得到一个礼物！！");
+    }
+    function fun2() {
+        if(confirm("确定接收礼物？"))
+            alert("对一下暗号先...");
+    }
+    function fun3() {
+        var code = prompt("请对暗号：").toString();
+        if (code=="你好"){
+            alert("给你礼物！！");
+
+        }else{
+            alert("暗号错误！");
+        }
+    }
+</script>
+</body>
+</html>

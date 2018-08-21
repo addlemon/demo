@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>时钟</title>
+</head>
+<body onload="startTime()">
+<!--
+    getDate()	从 Date 对象返回一个月中的某一天 (1 ~ 31)。
+    getDay()	从 Date 对象返回一周中的某一天 (0 ~ 6)。
+    getFullYear()	从 Date 对象以四位数字返回年份。
+    getHours()	返回 Date 对象的小时 (0 ~ 23)。
+    getMilliseconds()	返回 Date 对象的毫秒(0 ~ 999)。
+    getMinutes()	返回 Date 对象的分钟 (0 ~ 59)。
+    getMonth()	从 Date 对象返回月份 (0 ~ 11)。
+    getSeconds()	返回 Date 对象的秒数 (0 ~ 59)。
+    getTime()	返回 1970 年 1 月 1 日至今的毫秒数。
+-->
+
+<script>
+    function startTime() {
+        var time = new Date();
+        var h = time.getHours();
+        var m = time.getMinutes();
+        var s = time.getSeconds();
+        m = CheckTime(m);
+        s = CheckTime(s);
+        document.getElementById("timetxt").innerHTML = h + ":" + m + ":" + s;
+        t = setTimeout(function () {
+            startTime()
+        }, 1000);
+    }
+        function CheckTime(i) {
+            if (i < 9) {
+                i = "0" + i
+            }
+            return i;
+        }
+</script>
+<div id="timetxt"></div>
+<a href="history.html">跳转</a>
+<button onclick="gosz()">按钮</button>
+<script>
+function gosz() {
+history.forward();
+}
+</script>
+</body>
+</html>

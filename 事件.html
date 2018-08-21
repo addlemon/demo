@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件</title>
+    <style>
+        .div{
+            width: 100px;
+            height: 100px;
+            background: antiquewhite;
+            color: blue;
+        }
+    </style>
+</head>
+<body onload="onLoad(this)" onunload="onUnload(this)">
+        <!-- onClick: 单击事件
+             onMouseOver: 鼠标经过事件
+             onMouseOut:  鼠标移出事件
+             onMouseDown:   事件会在鼠标按键被按下时发生
+             onMouseUp:   事件会在鼠标按键被松开时发生
+             onChange:  文本内容改变事件
+             onSelect:  文本框内容选中事件
+             onFocus:  光标集聚事件
+             onBlur:   移开光标事件
+             onLoad:   网页加载事件
+             onUnload:   关闭网页事件-->
+  <div class="div" onmouseover="onOver(this)" onmouseout="onOut(this)" onmousedown="onDown(this)" onmouseup="onUp(this)">Hello world</div>
+  <script>
+        function onOver(i) {
+            i.style.background="blue";
+        }
+        function onOut(i) {
+            i.style.background="black";
+        }
+        function onDown(i) {
+            i.style.color = "black";
+        }
+        function onUp(i) {
+            i.style.color="white";
+        }
+  </script>
+<form>
+    <input id="text" type="text" onchange="alert('内容改变')" onselect="onSelect(this)" onfocus="onFocus(this)" onblur="onBlur(this)">
+    <input id="btn" type="button" value="跳转" onclick="demo()">
+
+</form>
+<script>
+    var x = document.getElementById("text").value;
+    function demo() {
+        window.location.href="www."+x+".com";
+    }
+</script>
+<script>
+    function onChange(j) {
+        alert("内容改变了");
+    }
+    function onSelect(j) {
+        j.style.borderColor = "black";
+    }
+    function onFocus(j) {
+        j.style.background = "red";
+    }
+    function onBlur(j) {
+        j.style.background = "white"
+    }
+    function onLoad(j) {
+        alert("网页加载完毕！")
+    }
+    function onUnload(j) {
+        alert("你真的要关闭这个网页吗")
+    }
+</script>
+</body>
+</html>

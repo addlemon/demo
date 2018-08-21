@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript 类型转换</title>
+</head>
+<body>
+<p> String() 方法可以将数字转换为字符串。</p>
+<p id="demo"></p>
+<script>
+    var x = 123;
+    document.getElementById("demo").innerHTML =
+        String(x) + "<br>" +
+        String(123) + "<br>" +
+        String(100 + 23);
+</script>
+
+
+<p>toString() 方法将数字转换为字符串。</p>
+<p id="demo1"></p>
+<script>
+    var x = 123;
+    document.getElementById("demo1").innerHTML =
+        x.toString() + "<br>" +
+        (123).toString() + "<br>" +
+        (100 + 23).toString();
+</script>
+
+
+<p>将字符串转换为数字,将布尔值转换为数字</p>
+<p id="pid"></p>
+<script>
+    document.getElementById("pid").innerHTML =
+        Number("3.14") + "<br>" +   // 返回 3.14
+        Number(" ")   + "<br>" +    // 返回 0
+        Number("")    + "<br>" +    // 返回 0
+        Number("99 88") +"<br>" +   // 返回 NaN
+        Number(false) +"<br>" +     // 返回 0
+        Number(true)                // 返回 1
+</script>
+
+<p> typeof 操作符返回变量或表达式的类型。</p>
+<button onclick="myFunction()">点我</button>
+<p id="demo2"></p>
+<script>
+    function myFunction() {
+        var y = "5";      // y 是一个字符串
+        var x = + y;      // x 是一个数字
+        var z = "John";   // y 是一个字符串
+        var t = + y;      // x 是一个数字 (NaN)
+        document.getElementById("demo2").innerHTML =
+            typeof y + "<br>" +
+            typeof x + "<br>" +
+            typeof z + "<br>" +
+            typeof t;
+    }
+</script>
+</body>
+</html>

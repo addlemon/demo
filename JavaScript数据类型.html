@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js数据类型</title>
+
+</head>
+<body>
+ <!--   <p id="length"></p>
+    <p id="points"></p>
+    <p id="lastName"></p>
+    <p id="cars"></p>
+    <p id="person"></p>
+    <script>
+        var length = 16;                                  // Number 通过数字字面量赋值
+        var points = x * 10;                              // Number 通过表达式字面量赋值
+        var lastName = "Johnson";                         // String 通过字符串字面量赋值
+        var cars = ["Saab", "Volvo", "BMW"];              // Array  通过数组字面量赋值
+        var person = {firstName:"John", lastName:"Doe"};  // Object 通过对象字面量赋值
+        document.getElementById("length").innerHTML=length;
+        document.getElementById("points").innerHTML=points;
+        document.getElementById("lastName").innerHTML=lastName;
+        document.getElementById("cars").innerHTML=cars;
+        document.getElementById("person").innerHTML=person;
+    </script>-->
+
+<a href="javascript:varTest()">aa</a>
+ <a onclick="letTest()">bb</a>
+    <script>
+        function varTest() {
+            var x = 1;
+            if (true) {
+                var x = 2;       // 同样的变量!
+                console.log(x);  // 2
+            }
+            console.log(x);  // 2
+        }
+
+        function letTest() {
+            let x = 1;
+            if (true) {
+                let x = 2;       // 不同的变量
+                console.log(x);  // 2
+            }
+            console.log(x);  // 1
+        }
+    </script>
+    <script>
+        var x = 34.00;
+        var y = 0.3400
+        var z = 124e-5;
+        document.write("<br>"+x+"<br>");
+        document.write(y+"<br>");
+        document.write(z+"<br>");
+        var i;
+        var cars = new Array();
+        cars[0] = "Saab";
+        cars[1] = "Volvo";
+        cars[2] = "BMW";
+
+        for (i=0;i<cars.length;i++)
+        {
+            document.write(cars[i] + "<br>");
+        }
+    </script>
+
+ <p id="pid"></p>
+    <script>
+        document.getElementById("pid").innerHTML=
+            typeof "join"+"<br>"+
+            typeof 123 + "<br>" +
+            typeof 3.14 + "<br>" +
+            typeof false + "<br>" +
+            typeof [1,2,3,4] + "<br>" +
+            typeof {name:'john', age:34} + "<br>" +
+            typeof null + "<br>" +
+            typeof new Date() + "<br>" +
+            typeof function () {}  + "<br>" +
+            typeof mycar;
+    </script>
+
+ <p> constructor 属性返回变量或对象的构造函数。</p>
+ <p id="demo"></p>
+ <script>
+     document.getElementById("demo").innerHTML =
+         "john".constructor + "<br>" +
+         (3.14).constructor + "<br>" +
+         false.constructor + "<br>" +
+         [1,2,3,4].constructor + "<br>" +
+         {name:'john', age:34}.constructor + "<br>" +
+         new Date().constructor + "<br>" +
+         function () {}.constructor;
+ </script>
+ <p>判断是否为数组。</p>
+ <p id="pid1"></p>
+ <script>
+     var fruits = ["Banana", "Orange", "Apple", "Mango"];
+     document.getElementById("pid1").innerHTML = isArray(fruits);
+     function isArray(myArray) {
+         return myArray.constructor.toString().indexOf("Array") > -1;
+     }
+ </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Location对象</title>
+</head>
+<body>
+<!--location.hostname 返回web主机的域名
+             pathname 返回当前页面的路径和文件名
+             port 返回端口
+             protocol web协议
+             href 页面url
+             assign() 加载新文档 重定向-->
+<button onclick="locat()">按钮</button>
+<button onclick="agn()">跳转到B站</button>
+<p id="pid"></p>
+<script>
+    function locat() {
+        document.getElementById("pid").innerHTML = window.location.hostname+"<br>"+window.location.pathname
+                                                +"<br>"+window.location.port+"<br>"+window.location.href;
+    }
+    function agn() {
+        location.assign("http://www.bilibili.com");
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input type="text" id="username"><br>
+    <input type="password" id="psw">
+</form>
+<button id="btn" onclick="safa()">登录</button>
+<script>
+    function safa() {
+        var name = document.getElementById("username").value;
+        var psw = document.getElementById("psw").value;
+        if (name == "admin"&& psw == "1234"){
+            history.go(-1);
+        }if (name != "admin"){
+            alert("输入错误账号")
+        } if (psw !="1234"){
+            alert("输入密码错误")
+        }
+        else{
+            alert("你输入的信息有误")
+        }
+    }
+
+</script>
+<button onclick="goblack()">后退</button>
+<script>
+    function goblack() {
+        history.back();
+    }
+</script>
+</body>
+</html>

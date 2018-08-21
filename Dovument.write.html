@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>document.write</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+    <p>i = 40, j= 10 ,j/i=?</p>
+    <p >结果为：<a id="sumid"></a></p>
+    <button type="button"  onclick="sum()">结果</button>
+    <button  onclick="alert('欢迎')">欢迎点击</button>
+    <button onclick="date()">日期</button>
+    <script>
+        function sum() {
+            var i = '40';
+            var j = 10;
+            var m = i / j;
+            var x=document.getElementById("sumid").innerHTML=m;
+            console.log(m);  //F12 控制器显示
+
+            document.getElementById("sumid").style.color = "blue";
+            alert(x);
+        }
+        function date() {
+            document.write(Date());
+
+        }
+    </script>
+    <script>
+        document.write("<h1>hahaha</h1>");
+        document.write(Date()+"<br>");
+
+
+    </script>
+
+    <script>
+        // test = new Object();
+        // test.firstname = "John";
+        // test.lastname = "Doe";
+        // test.id = 666;
+        // document.write(test.firstname+test.lastname+test.id);
+
+    var test= {
+        firstname:"John",
+        lastname:"Doe",
+        id:5566
+    };
+    document.write(test.firstname+"<br>");
+    document.write(test["lastname"]+"<br>");
+    document.write(test.id+"<br>");
+    </script>
+
+   <!-- <script language="JavaScript">
+        var bb = 1;
+        function  aa(bb) {
+            bb = 2;
+            //alert(bb);
+        }
+        aa(bb);
+        alert(bb);
+    </script>-->
+
+</body>
+</html>
