@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>prompt</title>
+    <script type="text/javascript">
+        var price = 10, count;
+        count = prompt(price + "元一杯，你要多少杯！");
+        if (isNaN(count)) {
+            alert("这不是数字");
+        } else {
+            if (count % 1 === 0) {
+                if (count % 2 == 0) {
+                    sum = count * price * 3 / 4;
+                }
+                else {
+                    sum = count * price * 3 / 4+price/4;
+                }
+                alert("你消费了" + sum + "元");
+            }
+            else {
+                alert("本店只能一整杯的卖");
+            }
+        }
+        // document.write(Math.random()); //产生随机数
+    </script>
+</head>
+<body>
+<p id="aa">45545</p>
+</body>
+</html>

@@ -5,36 +5,58 @@
     <title>css动画</title>
     <style>
         @keyframes frist {
-            /*from{color: #5e5e5e;opacity: 0; margin-left: 0;}*/
-            /*to{color: #4cae4c;opacity: 100; margin-left: 500px;}*/
-            0%{margin-left: 0px; color: red}
-            25%{margin-left: 200px; color: orange}
-            50%{margin-left:0; color: yellow}
-            75%{margin-left:200px; color: green}
-            100%{margin-left:0px; color: blue}
+            from{color: #5e5e5e;opacity: 0;left: 0;}
+            to{color: #4cae4c;opacity: 100; left: 200px;}
+            /*0% {*/
+                /*left: 0px;*/
+                /*color: red*/
+            /*}*/
+            /*25% {*/
+                /*left: 200px;*/
+                /*color: orange*/
+            /*}*/
+            /*50% {*/
+                /*left: 0;*/
+                /*color: yellow*/
+            /*}*/
+            /*75% {*/
+                /*left: 200px;*/
+                /*color: green*/
+            /*}*/
+            /*100% {*/
+                /*left: 0px;*/
+                /*color: blue*/
+            /*}*/
 
         }
-        *{
+
+        * {
             margin: 0;
             padding: 0;
         }
 
-        h1{
-          animation: frist 5s infinite;
+        h1 {
+            position: relative;
+            animation: frist 5s infinite;
+            /*-moz-animation-timing-function: cubic-bezier(0,0,0.58,1);*/
+            animation-timing-function: linear; /* 控制动画曲线*/
+            animation-direction: alternate; /*alternate 动画反复播出*/
         }
-        body{
-            background-image: url("images/03.jpg") ;
-            background-size:100% 100%;
+
+        body {
+            background-image: url("images/03.jpg");
+            background-size: 100% 100%;
             height: 100%;
         }
-        html{
+
+        html {
             height: 100%;
         }
     </style>
 </head>
 <body>
-    <h1>yfwu1998</h1>
+<h1>yfwu1998</h1>
 
-    <audio src="bgm/最美的期待.mp3" controls autoplay></audio>
+<audio src="bgm/最美的期待.mp3" controls autoplay></audio>
 </body>
 </html>

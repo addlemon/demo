@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>四季交替</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body,html,page{
+            height: 100%;
+            width: 100%;
+        }
+        page{
+            font-size: 150px;
+            position: absolute;
+            text-align: center;
+            color: aqua;
+        }
+
+        #c{
+            background-image: url("images/c.jpg");
+            background-size: 100% 100%;
+            animation: c 14s infinite;
+        }
+        #x{
+            background-image: url("images/x.jpg");
+            background-size: 100% 100%;
+            animation: x 14s infinite;
+        }
+        #q{
+            background-image: url("images/q.jpg");
+            background-size: 100% 100%;
+            animation: q 14s infinite;
+        }
+        #d{
+            background-image: url("images/d.jpg");
+            background-size: 100% 100%;
+            animation: d 14s infinite;
+        }
+        #z{
+            font-size: 70px;
+            display: block;
+            animation: z 14s infinite;
+        }
+
+
+        @keyframes c {
+            0%{opacity: 0}
+            20%{opacity: 100}
+            40%{opacity: 0}
+            100%{opacity: 0}
+        }
+        @keyframes x {
+            0%{opacity: 0}
+            20%{opacity: 0}
+            40%{opacity: 100}
+            60%{opacity: 0}
+            100%{opacity: 0}
+        }@keyframes q {
+             0%{opacity: 0}
+             40%{opacity: 0}
+             60%{opacity: 100}
+             80%{opacity: 0}
+             100%{opacity: 0}
+         }
+        @keyframes d {
+            0%{opacity: 0}
+            60%{opacity: 0}
+            80%{opacity: 100}
+            100%{opacity: 0}
+        }
+        @keyframes z {
+            0%{opacity: 0}
+            70%{opacity: 0}
+            80%{opacity: 100}
+            90%{opacity: 100}
+            100%{opacity: 0}
+        }
+    </style>
+</head>
+<body>
+<audio src="bgm/ls.mp3" autoplay loop></audio>
+    <page id="c">春 </page>
+    <page id="x">夏</page>
+    <page id="q">秋</page>
+    <page id="d">冬
+        <span id="z">万里冰封</span>
+    </page>
+</body>
+</html>
