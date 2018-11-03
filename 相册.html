@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>相册</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        #head{
+            width: 800px;
+            height: 100px;
+            margin: 20px auto;
+
+        }
+        #head li{
+            width: 180px;
+            height: 100px;
+            display: inline-block;
+            border: 2px solid #5e5e5e;
+            overflow: hidden;
+            border-radius: 5px;
+            margin-left: 12px;
+        }
+        #head li a img{
+            width: 180px;
+            height: 100px;
+
+        }
+
+        #body{
+            margin: 0 auto;
+            width: 800px;
+            overflow: hidden;
+            border-radius: 15px;
+            border: 3px solid #5e5e5e;
+        }
+        #body img{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div id="head">
+    <ul>
+        <li><a href="images/03.jpg" onclick="return test(3)"><img src="images/03.jpg"></a></li>
+        <li><a href="images/04.jpg" onclick="return test(4)"><img src="images/04.jpg"></a></li>
+        <li><a href="images/06.jpg" onclick="return test(6)"><img src="images/06.jpg"></a></li>
+        <li><a href="images/09.jpg" onclick="return test(9)"><img src="images/09.jpg"></a></li>
+    </ul>
+</div>
+<div id="body">
+    <img id="img" src="images/03.jpg">
+</div>
+<script>
+    var img =document.getElementById("img");
+    function test(aa) {
+        img.src = "images/0"+aa+".jpg";
+        return false;
+    }
+</script>
+</body>
+</html>
